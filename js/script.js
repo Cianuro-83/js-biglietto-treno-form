@@ -39,8 +39,20 @@ btnElement.addEventListener("click", function () {
   // creo la variabile relativa ai km
   let km = parseInt(kmElement.value);
   console.log(age, "km", km);
+  switch (km) {
+    case ">=0":
+      fullPrize = prize * km;
+      console.log(fullPrize);
+      break;
+    case "<0":
+      fullPrize = prize * 100000;
+      console.log(fullPrize);
+      break;
+    default:
+      fullPrize = prize * 100000;
+  }
 
-  fullPrize = prize * km;
+  //   fullPrize = prize * km;
   // calcolo il prezzo dei biglietti per minorenne
   youngDiscount = [fullPrize * youngDiscountPercent - fullPrize] * -1;
   youngPrize = youngDiscount.toFixed(2);
@@ -48,17 +60,6 @@ btnElement.addEventListener("click", function () {
   oldDiscount = [fullPrize * oldDiscountPercent - fullPrize] * -1;
   oldPrize = oldDiscount.toFixed(2);
   console.log(fullPrize, youngPrize, oldPrize);
-
-  //   if (age === "minorenne") {
-  //     itCost = youngPrize;
-  //     console.log(itCost);
-  //   } else if (age === "adulto") {
-  //     itCost = fullPrize;
-  //     console.log(ItCost);
-  //   } else {
-  //     itCost = oldPrize;
-  //     console.log(itCost);
-  //   }
 
   switch (age) {
     case "minorenne":
@@ -74,12 +75,12 @@ btnElement.addEventListener("click", function () {
       console.log(itCost);
       break;
     default:
-      itCost = fullPrize.toFixed(2);
+      itCost = (fullPrize * 10).toFixed(2);
       console.log(itCost);
   }
 
   let toPayElement = document.getElementById("costo-biglietto");
-  toPayElement.innerHTML = itCost;
+  toPayElement.innerHTML = itCost + " €";
   userNameElement.innerHTML = name;
   surnameElement.innerHTML = surname;
 });
