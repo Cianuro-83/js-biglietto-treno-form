@@ -21,10 +21,14 @@
     <div class="container">
         <div class="row row-cols-2">
             <div class="col my-5">
+                <input class="text-uppercase form-control" type="text" name="name" id="first-name"
+                    placeholder="nome utente">
+                <input class="text-uppercase form-control my-5" type="text" name="surname" id="last-name"
+                    placeholder="cognome utente">
                 <input class="text-uppercase form-control" type="number" name="km" id="km"
                     placeholder="km da percorrere">
                 <select class="form-control my-5" name="eta" id="eta">
-                    <option value="">-- Seleziona la tua fascia d'età --</option>
+                    <option value="not-declared">-- Seleziona la tua fascia d'età --</option>
                     <option value="minorenne">Da 0 a 17 anni</option>
                     <option value="adulto">Da 18 a 64 anni</option>
                     <option value="anziano">Da 65 anni in su</option>
@@ -32,6 +36,9 @@
                 <input id="btn" type="button" value="Genera Biglietto" class="p-2 btn btn-outline-info">
             </div>
             <div class="col">
+                <p id="nome-utente"></p>
+                <p id="cognome-utente"></p>
+                <p id="costo-biglietto"></p>
 
 
             </div>
