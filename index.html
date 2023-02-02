@@ -72,16 +72,28 @@
             </div>
         </div>
     </div>
-    <div class="container scb-container">
-        <div class="row row-cols-2  justify-content-center">
+    <div id="scb-container" class="container scb-container d-none">
+        <div class="row row-cols-2 ">
             <div class="col py-3 scb-col text-center">
                 <h5 class="text-uppercase text-warning">nome passeggero</h5>
                 <p class="fw-normal">Nome: <span class="fw-bold text-white text-capitalize" id="nome-utente"></span></p>
                 <p class="fw-normal">Cognome: <span class="fw-bold text-white text-capitalize"
-                        id="cognome-utente"></span> </p>
+                        id="cognome-utente"></span>
+                </p>
+                <p>
+                    <i class="fa-solid fa-train scb-icon mt-5"></i>
+                </p>
+                <h2 class="text-danger">
+                    CIANURO'S RAYLWAYAS
+                </h2>
+                <p>
+                    <i class="fa-solid fa-train scb-icon"></i>
+
+                </p>
+
             </div>
-            <div class="col py-3 ">
-                <div class="row row-cols-3 justify-content-between text-center">
+            <div class="col pt-3 align-items-center justify-content-center">
+                <div class="row row-cols-3 text-center">
                     <div class="col">
                         <p class="fw-bold">Offerta</p>
                         <p id="offerta"></p>
@@ -96,6 +108,7 @@
                     </div>
                     <div class="col-12 text-center scb-prize">
                         <h2 id="costo-biglietto"></h2>
+                        <img class="scb-qrcode" src="./img/qr-code.png" alt="">
                     </div>
 
                 </div>

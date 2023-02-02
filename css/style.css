@@ -7,6 +7,9 @@ body {
   background-color: darkred;
   color: white;
 }
+img {
+  width: 100%;
+}
 /* **************************
 DESCRIPTION
 ************************** */
@@ -31,4 +34,12 @@ td.scbth {
   background-color: green;
   padding: 5px;
   color: white;
+}
+
+.scb-qrcode {
+  width: 200px;
+}
+
+.scb-icon {
+  font-size: 40px;
 }

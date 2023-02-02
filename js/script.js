@@ -98,4 +98,6 @@ btnElement.addEventListener("click", function () {
   let cpCode = Math.round(Math.random() * 100000);
   let cp = document.getElementById("cp-code");
   cp.innerHTML = cpCode;
+  let container = document.getElementById("scb-container");
+  container.classList.toggle("d-none");
 });
