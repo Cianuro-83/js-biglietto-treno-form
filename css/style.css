@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 body {
-  background-color: black;
+  background-color: darkred;
   color: white;
+}
+/* **************************
+DESCRIPTION
+************************** */
+.fa-train {
+  color: greenyellow;
 }

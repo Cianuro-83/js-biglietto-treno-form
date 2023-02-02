@@ -32,6 +32,7 @@ btnElement.addEventListener("click", function () {
     youngDiscountPercent = 0.2,
     oldDiscountPercent = 0.4,
     itCost,
+    offering,
     name = firstNameElement.value;
   surname = lastNameElement.value;
   // creo la variabile relativa all'età
@@ -64,23 +65,37 @@ btnElement.addEventListener("click", function () {
   switch (age) {
     case "minorenne":
       itCost = youngPrize;
-      console.log(itCost);
+      offering = "Ridotto under 18";
+      console.log(itCost, offering);
       break;
     case "adulto":
       itCost = fullPrize.toFixed(2);
-      console.log(itCost);
+      offering = "Biglietto Standard";
+      console.log(itCost, offering);
       break;
     case "anziano":
       itCost = oldPrize;
-      console.log(itCost);
+      offering = "Ridotto over 65";
+      console.log(itCost, offering);
       break;
     default:
       itCost = (fullPrize * 10).toFixed(2);
-      console.log(itCost);
+      offering = "Maggiorata per dato mancante";
+      console.log(itCost, offering);
   }
 
   let toPayElement = document.getElementById("costo-biglietto");
   toPayElement.innerHTML = itCost + " €";
   userNameElement.innerHTML = name;
   surnameElement.innerHTML = surname;
+  let whyDiscount = document.getElementById("offerta");
+  whyDiscount.innerHTML = offering;
+  // genero numero casuale per la carrozza
+  let train = Math.round(Math.random() * 20 + 1);
+  let vectura = document.getElementById("carrozza");
+  vectura.innerHTML = train;
+  // genero numero casuale per la codice CP
+  let cpCode = Math.round(Math.random() * 100000);
+  let cp = document.getElementById("cp-code");
+  cp.innerHTML = cpCode;
 });
