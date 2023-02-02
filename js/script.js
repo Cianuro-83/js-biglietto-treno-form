@@ -40,20 +40,20 @@ btnElement.addEventListener("click", function () {
   // creo la variabile relativa ai km
   let km = parseInt(kmElement.value);
   console.log(age, "km", km);
-  switch (km) {
-    case ">=0":
-      fullPrize = prize * km;
-      console.log(fullPrize);
-      break;
-    case "<0":
-      fullPrize = prize * 100000;
-      console.log(fullPrize);
-      break;
-    default:
-      fullPrize = prize * 100000;
-  }
+  // switch (km) {
+  //   case ">=0":
+  //     fullPrize = prize * km;
+  //     console.log(fullPrize);
+  //     break;
+  //   case "<0":
+  //     fullPrize = prize * 100000;
+  //     console.log(fullPrize);
+  //     break;
+  //   default:
+  //     fullPrize = prize * 100000;
+  // }
 
-  //   fullPrize = prize * km;
+  fullPrize = prize * km;
   // calcolo il prezzo dei biglietti per minorenne
   youngDiscount = [fullPrize * youngDiscountPercent - fullPrize] * -1;
   youngPrize = youngDiscount.toFixed(2);

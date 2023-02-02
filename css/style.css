@@ -13,3 +13,22 @@ DESCRIPTION
 .fa-train {
   color: greenyellow;
 }
+.scb-container {
+  background-color: whitesmoke;
+  color: black;
+}
+.scb-col {
+  background-color: grey;
+}
+td.scb-central {
+  padding: 0 50px !important;
+}
+td.scbth {
+  text-align: center !important;
+}
+
+.scb-prize {
+  background-color: green;
+  padding: 5px;
+  color: white;
+}
